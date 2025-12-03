@@ -79,6 +79,16 @@ async function initDatabase() {
       )
     `);
     
+    await query(`
+      CREATE TABLE IF NOT EXISTS push_subscriptions (
+        id SERIAL PRIMARY KEY,
+        endpoint TEXT NOT NULL UNIQUE,
+        p256dh TEXT,
+        auth TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+    
     // Insert default admin user if none exists
     const adminCheck = await query("SELECT COUNT(*) as count FROM admin_users");
     if (parseInt(adminCheck.rows[0].count) === 0) {
