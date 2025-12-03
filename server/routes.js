@@ -5,9 +5,9 @@ import webpush from "web-push";
 const { Pool } = pg;
 
 // Configure web-push with VAPID keys
-const vapidPublicKey = process.env.VAPID_PUBLIC_KEY || 'BMCGbFCVp3-9I01uEpRk0fSjJplMC9T4rzxRn-bkOT6gl1BrY9GdcY92mMKVMzT8z6NlbpNNymA1h5INVlX_zu4';
-const vapidPrivateKey = process.env.VAPID_PRIVATE_KEY || '0wwLIk9w79_PzdCCgZH0HVh7dCwamZ8jZqgOjP9aXTE';
-const vapidEmail = process.env.VAPID_EMAIL || 'mailto:notification@example.com';
+const vapidPublicKey = process.env.VAPID_PUBLIC_KEY || 'BEcC66GuOtQGBi5BZyfUZXCaSw23T6a5eZuRVnKUWl_T965QsjnTePMIynVuQJA5CPm62Uf8SypBY3241CWjSFg';
+const vapidPrivateKey = process.env.VAPID_PRIVATE_KEY || 'vwvWWb_KcNuPkSEHmJdOiIFIqj29z6eJ0eAzKu9xaB8';
+const vapidEmail = process.env.VAPID_EMAIL || 'mailto:bdhhdgdfkk@gmail.com';
 
 webpush.setVapidDetails(vapidEmail, vapidPublicKey, vapidPrivateKey);
 
